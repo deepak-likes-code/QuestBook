@@ -7,39 +7,14 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "addMoneyToAccount",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
+				"name": "addBalance",
+				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "addMoneyToBank",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "userAddress",
-						"type": "address"
-					}
-				],
-				"name": "checkAccountBalance",
+				"name": "getContractBalance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -52,7 +27,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "getTotalcEth",
+				"name": "getTotalEthFromCeth",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -65,7 +40,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "totalContractBalance",
+				"name": "getUserEth",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -80,20 +55,24 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "withdrawAmount",
 						"type": "uint256"
 					}
 				],
-				"name": "withDrawMoney",
+				"name": "withdraw",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bool"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "payable",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -109,7 +88,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Bank/simpleBank.sol": "SmartBank"
+			"Bank/simpleBank.sol": "SmartBankCompound"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -124,19 +103,11 @@
 	},
 	"sources": {
 		"Bank/simpleBank.sol": {
-			"keccak256": "0xbd2aa0dc7630e8c8cc5bc4832fc176506761b8c0976cd1e6ed00e64706084be1",
+			"keccak256": "0x4cff081888934055a1e92ad6dc4e85459d69901853591b50e92d519d8bbbddcd",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://79d1aca3bd77bc535db186773f643a4ba17c73727aca1a0c174d9f5d36fb3a3b",
-				"dweb:/ipfs/QmdgdWFRKtHKAHyLF6yC9X2SMo7pzZT3VtXZ69coo1C8yU"
-			]
-		},
-		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol": {
-			"keccak256": "0xa2f576be637946f767aa56601c26d717f48a0aff44f82e46f13807eea1009a21",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://973868f808e88e21a1a0a01d4839314515ee337ad096286c88e41b74dcc11fc2",
-				"dweb:/ipfs/QmfYuZxRfx2J2xdk4EXN7jKg4bUYEMTaYk9BAw9Bqn4o2Y"
+				"bzz-raw://729869b78878ad6de37e5d3f2d2560ec962f1b88eaa7dfd15d8087f98e707e70",
+				"dweb:/ipfs/QmVphHynXZiPyssr3X48TH7n3njvfPZgodAp5nhNGn1GS3"
 			]
 		}
 	},
